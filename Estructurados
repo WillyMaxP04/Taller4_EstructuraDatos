@@ -1,0 +1,12 @@
+fun main() {
+    data class Persona(val nombre: String, val edad: Int)
+    
+    val persona1 = Persona("Juan", 30)
+    val persona2 = Persona("María", 25)
+    
+    val listaPersonas = listOf(persona1, persona2)
+    
+    for (persona in listaPersonas) {
+        println("Nombre: ${persona.nombre}, Edad: ${persona.edad} años")
+    }
+}
