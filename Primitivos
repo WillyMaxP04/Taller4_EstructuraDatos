@@ -1,0 +1,11 @@
+fun main() {
+    val entero: Int = 42
+    val flotante: Float = 3.14f
+    val caracter: Char = 'A'
+    val booleano: Boolean = true
+    
+    println("Número entero: $entero")
+    println("Número de punto flotante: $flotante")
+    println("Carácter: $caracter")
+    println("Valor lógico: $booleano")
+}
