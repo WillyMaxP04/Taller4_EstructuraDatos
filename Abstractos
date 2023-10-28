@@ -1,0 +1,40 @@
+// Definición de la interfaz Nodo
+interface Nodo {
+    fun obtenerInformacion(): String
+}
+
+// Clase que implementa la interfaz Nodo para la raíz del árbol
+class NodoRaiz : Nodo {
+    override fun obtenerInformacion(): String {
+        return "Este es el nodo raíz del árbol."
+    }
+}
+
+// Clase que implementa la interfaz Nodo para una planta en el árbol
+class NodoPlanta : Nodo {
+    override fun obtenerInformacion(): String {
+        return "Este es un nodo de planta en el árbol."
+    }
+}
+
+// Clase que implementa la interfaz Nodo para una hoja en el árbol
+class NodoHoja : Nodo {
+    override fun obtenerInformacion(): String {
+        return "Este es un nodo de hoja en el árbol."
+    }
+}
+
+fun main() {
+    // Uso de un condicional para determinar el tipo de nodo
+    val tipoNodo = "Planta" // Cambia esto a "Raíz" o "Hoja" para probar diferentes tipos de nodos
+
+    val nodo: Nodo = when (tipoNodo) {
+        "Raíz" -> NodoRaiz()
+        "Planta" -> NodoPlanta()
+        "Hoja" -> NodoHoja()
+        else -> throw IllegalArgumentException("Tipo de nodo no válido.")
+    }
+
+    // Muestra la información del nodo
+    println(nodo.obtenerInformacion())
+}
